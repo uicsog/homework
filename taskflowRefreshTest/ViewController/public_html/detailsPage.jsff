@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelHeader text="Special Section" id="ph1">   
+    <f:facet name="info">
+      <af:outputText id="ot1"
+                     value="Value from input param = #{pageFlowScope.param1}"/>
+    </f:facet>
+  <af:panelFormLayout id="pfl1">
+      <af:inputText label="Naam" id="it1" value="#{pageFlowScope.detailsBean.name}"/>
+      <af:inputText label="Adres" id="it2" value="#{pageFlowScope.detailsBean.address}"/>
+      <af:inputText label="Telefoon" id="it3" value="#{pageFlowScope.detailsBean.telephone}"/>
+    </af:panelFormLayout>
+  </af:panelHeader>
+</jsp:root>

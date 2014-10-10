@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-1250" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="details-tf">
+    <default-activity id="__5">detailsView</default-activity>
+    <managed-bean id="__8">
+      <managed-bean-name id="__9">detailsTFBean</managed-bean-name>
+      <managed-bean-class id="__7">pl.com.lukas.homework.ce1.view.beans.DetailsTFBean</managed-bean-class>
+      <managed-bean-scope id="__6">pageFlow</managed-bean-scope>
+    </managed-bean>
+    <view id="detailsView">
+      <page>/detailsView.jsff</page>
+    </view>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.61.92"
+          id="EventHandlerBean" Package="nl.amis.taskflowrefresh.view"
+          BeanClass="nl.amis.taskflowrefresh.view.EventHandlerBean"
+          isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="void" id="handleEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="payload" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true"
+                     Type="nl.amis.taskflowrefresh.view.EventHandlerBean"
+                     BeanClass="nl.amis.taskflowrefresh.view.EventHandlerBean"
+                     id="EventHandlerBean"/>
+</JavaBean>

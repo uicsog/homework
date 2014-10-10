@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.64.93" id="EventHandlerBean"
+          Package="pl.com.lukas.homework.ce1.view.dc" BeanClass="pl.com.lukas.homework.ce1.view.dc.EventHandlerBean"
+          isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="void" id="handleEvent" ReturnNodeName="Return">
+    <ParameterInfo id="payload" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="genericHandleEvent" ReturnNodeName="Return">
+    <ParameterInfo id="eventName" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="payload" Type="java.lang.Object" isStructured="false"/>
+    <ParameterInfo id="eventHandler" Type="pl.com.lukas.homework.ce1.view.util.GenericEventHandler"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true" Type="pl.com.lukas.homework.ce1.view.dc.EventHandlerBean"
+                     BeanClass="pl.com.lukas.homework.ce1.view.dc.EventHandlerBean" id="EventHandlerBean"/>
+</JavaBean>

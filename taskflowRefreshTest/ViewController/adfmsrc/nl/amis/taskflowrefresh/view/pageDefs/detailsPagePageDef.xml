@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.61.92" id="detailsPagePageDef"
+                Package="nl.amis.taskflowrefresh.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+  </executables>
+  <bindings>
+    <methodAction id="handleEvent" InstanceName="EventHandlerBean.dataProvider"
+                  DataControl="EventHandlerBean" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="handleEvent"
+                  IsViewObjectMethod="false">
+      <NamedData NDName="payload" NDType="java.lang.Object" NDValue="${payLoad}"/>
+    </methodAction>
+  </bindings>
+  <eventMap xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+    <event name="SaveEvent">
+      <producer region="*">
+        <consumer handler="handleEvent"/>
+      </producer>
+    </event>
+  </eventMap>
+</pageDefinition>

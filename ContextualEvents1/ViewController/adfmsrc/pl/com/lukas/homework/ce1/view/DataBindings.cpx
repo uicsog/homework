@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.1.64.93" id="DataBindings"
+             SeparateXMLFiles="false" Package="pl.com.lukas.homework.ce1.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/master.jspx" usageId="pl_com_lukas_homework_ce1_view_masterPageDef"/>
+    <page path="/detailsView.jsff" usageId="pl_com_lukas_homework_ce1_view_detailsViewPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="pl_com_lukas_homework_ce1_view_masterPageDef"
+          path="pl.com.lukas.homework.ce1.view.pageDefs.masterPageDef"/>
+    <page id="pl_com_lukas_homework_ce1_view_detailsViewPageDef"
+          path="pl.com.lukas.homework.ce1.view.pageDefs.detailsViewPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="EventPublisherBean" path="pl.com.lukas.homework.ce1.view.EventPublisherBean"/>
+    <dc id="EventHandlerBean" path="pl.com.lukas.homework.ce1.view.EventHandlerBean"/>
+  </dataControlUsages>
+</Application>

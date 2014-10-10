@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="details-form-task-flow-definition">
+    <default-activity id="__1">detailsPage</default-activity>
+    <input-parameter-definition id="__7">
+      <name id="__6">inputParameter1</name>
+      <value>#{pageFlowScope.param1}</value>
+      <class>java.lang.String</class>
+    </input-parameter-definition>
+    <managed-bean id="__4">
+      <managed-bean-name id="__3">detailsBean</managed-bean-name>
+      <managed-bean-class id="__2">nl.amis.taskflowrefresh.view.DetailsBean</managed-bean-class>
+      <managed-bean-scope id="__5">pageFlow</managed-bean-scope>
+    </managed-bean>
+    <view id="detailsPage">
+      <page>/detailsPage.jsff</page>
+    </view>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

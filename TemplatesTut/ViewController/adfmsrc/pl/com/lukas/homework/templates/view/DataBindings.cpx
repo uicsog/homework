@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.1.64.93" id="DataBindings"
+             SeparateXMLFiles="false" Package="pl.com.lukas.homework.templates.view" ClientType="Generic">
+  <pageMap>
+    <page path="/main.jspx" usageId="pl_com_lukas_homework_templates_view_mainPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="pl_com_lukas_homework_templates_view_mainPageDef"
+          path="pl.com.lukas.homework.templates.view.pageDefs.mainPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="pl.com.lukas.homework.templates.model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

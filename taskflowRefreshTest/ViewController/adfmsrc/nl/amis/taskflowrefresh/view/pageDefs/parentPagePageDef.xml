@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.61.92" id="parentPagePageDef"
+                Package="nl.amis.taskflowrefresh.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="detailsformtaskflowdefinition1"
+              taskFlowId="/WEB-INF/details-form-task-flow-definition.xml#details-form-task-flow-definition"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"
+              Refresh="ifNeeded">
+      <parameters>
+        <parameter id="inputParameter1" value="#{viewScope.parentBean.value}"/>
+      </parameters>
+    </taskFlow>
+  </executables>
+  <bindings>
+    <methodAction id="publishEvent"
+                  InstanceName="EventPublisherBean.dataProvider"
+                  DataControl="EventPublisherBean" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="publishEvent"
+                  IsViewObjectMethod="false"
+                  ReturnName="data.EventPublisherBean.methodResults.publishEvent1_EventPublisherBean_dataProvider_publishEvent_result">
+      <NamedData NDName="payload" NDType="java.lang.Object"/>
+      <events xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+        <event name="SaveEvent"/>
+      </events>
+    </methodAction>
+  </bindings>
+</pageDefinition>

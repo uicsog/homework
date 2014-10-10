@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:form id="f1">
+        <af:panelStretchLayout topHeight="50px" id="psl1">
+          <f:facet name="top"/>
+          <f:facet name="center">
+            <af:panelGroupLayout layout="scroll"
+                                 xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                                 id="pgl1">
+              <af:panelFormLayout id="pfl1">
+                <af:inputText label="Value One" id="it1"
+                              value="#{viewScope.parentBean.value}"
+                              autoSubmit="true"/>
+                <af:inputText label="Other Value" id="it2"
+                              value="#{viewScope.parentBean.otherValue}"
+                              autoSubmit="true"/>
+                <af:region value="#{bindings.detailsformtaskflowdefinition1.regionModel}"
+                           id="r1"/>
+                <f:facet name="footer">
+                  <af:group id="g1">
+                    <af:panelGroupLayout id="pgl2" layout="horizontal">
+                      <af:commandButton text="Publish Save Event" id="cb1"
+                                        actionListener="#{viewScope.parentBean.buttonPressedEvent}"/>
+                      <af:spacer id="sp1" width="15"/>
+                      <af:commandButton text="Submit" id="cb2"/>
+                    </af:panelGroupLayout>
+                  </af:group>
+                </f:facet>
+              </af:panelFormLayout>
+            </af:panelGroupLayout>
+            <!-- id="af_one_column_header_stretched"  -->
+          </f:facet>
+        </af:panelStretchLayout>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

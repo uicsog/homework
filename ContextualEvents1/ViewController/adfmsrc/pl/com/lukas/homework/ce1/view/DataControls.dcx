@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="11.1.1.64.93" id="DataControls"
+                    Package="pl.com.lukas.homework.ce1.view">
+  <AdapterDataControl id="EventHandlerBean" FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="true" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="pl.com.lukas.homework.ce1.view.dc.EventHandlerBean"
+                      BeanClass="pl.com.lukas.homework.ce1.view.dc.EventHandlerBean"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="pl.com.lukas.homework.ce1.view.dc.EventHandlerBean"/>
+    </CreatableTypes>
+    <Source>
+      <bean-definition BeanClass="pl.com.lukas.homework.ce1.view.dc.EventHandlerBean"
+                       xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+  <AdapterDataControl id="EventPublisherBean" FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="true" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="pl.com.lukas.homework.ce1.view.dc.EventPublisherBean"
+                      BeanClass="pl.com.lukas.homework.ce1.view.dc.EventPublisherBean"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="pl.com.lukas.homework.ce1.view.dc.EventPublisherBean"/>
+    </CreatableTypes>
+    <Source>
+      <bean-definition BeanClass="pl.com.lukas.homework.ce1.view.dc.EventPublisherBean"
+                       xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.1.64.93" id="masterPageDef"
+                Package="pl.com.lukas.homework.ce1.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="detailstf1" taskFlowId="/WEB-INF/details-tf.xml#details-tf" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+  </executables>
+  <bindings>
+    <methodAction id="publishEvent" InstanceName="EventPublisherBean.dataProvider" DataControl="EventPublisherBean"
+                  RequiresUpdateModel="true" Action="invokeMethod" MethodName="publishEvent" IsViewObjectMethod="false"
+                  ReturnName="data.EventPublisherBean.methodResults.publishEvent_EventPublisherBean_dataProvider_publishEvent_result">
+      <NamedData NDName="payload" NDType="java.lang.Object"/>
+      <events xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+        <event name="TestEvent" />
+      </events>
+    </methodAction>
+    <eventBinding id="testEvent" Listener="javax.faces.event.ActionListener">
+        <events xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+            <event name="testEvent" customPayLoad="PAYLOAD 2"/>
+        </events>
+    </eventBinding>
+    <eventBinding id="eventBinding" Listener="javax.faces.event.ActionListener">
+      <events xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+        <event name="TestEvent2" customPayLoad="THIRD PAYLOAD"/>
+      </events>
+    </eventBinding>
+  </bindings>
+</pageDefinition>

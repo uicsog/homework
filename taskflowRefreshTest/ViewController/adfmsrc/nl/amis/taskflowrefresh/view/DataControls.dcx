@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration"
+                    version="11.1.1.61.92" id="DataControls"
+                    Package="nl.amis.taskflowrefresh.view">
+  <AdapterDataControl id="EventHandlerBean"
+                      FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDefinition"
+                      SupportsTransactions="false" SupportsSortCollection="true"
+                      SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="nl.amis.taskflowrefresh.view.EventHandlerBean"
+                      BeanClass="nl.amis.taskflowrefresh.view.EventHandlerBean"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="nl.amis.taskflowrefresh.view.EventHandlerBean"/>
+    </CreatableTypes>
+    <Source>
+      <bean-definition BeanClass="nl.amis.taskflowrefresh.view.EventHandlerBean"
+                       xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+  <AdapterDataControl id="EventPublisherBean"
+                      FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDefinition"
+                      SupportsTransactions="false" SupportsSortCollection="true"
+                      SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="nl.amis.parent.EventPublisherBean"
+                      BeanClass="nl.amis.parent.EventPublisherBean"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="nl.amis.parent.EventPublisherBean"/>
+    </CreatableTypes>
+    <Source>
+      <bean-definition BeanClass="nl.amis.parent.EventPublisherBean"
+                       xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.1.64.93" id="detailsViewPageDef"
+                Package="pl.com.lukas.homework.ce1.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+  </executables>
+  <bindings>
+    <methodAction id="handleEvent" InstanceName="EventHandlerBean.dataProvider" DataControl="EventHandlerBean"
+                  RequiresUpdateModel="true" Action="invokeMethod" MethodName="handleEvent" IsViewObjectMethod="false">
+      <NamedData NDName="payload" NDType="java.lang.Object" NDValue="${payLoad}"/>
+    </methodAction>
+    
+    <methodAction id="genericHandleEvent" InstanceName="EventHandlerBean.dataProvider" DataControl="EventHandlerBean"
+                  RequiresUpdateModel="true" Action="invokeMethod" MethodName="genericHandleEvent"
+                  IsViewObjectMethod="false">
+      <NamedData NDName="eventName" NDType="java.lang.String"/>
+      <NamedData NDName="payload" NDType="java.lang.Object"/>
+      <NamedData NDName="eventHandler" NDType="pl.com.lukas.homework.ce1.view.util.GenericEventHandler"/>
+    </methodAction>
+  </bindings>
+   
+  <eventMap xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+    <event name="TestEvent2">
+      <producer region="*">
+        <consumer region="" handler="genericHandleEvent" handleCondition="">
+          <parameters>
+            <parameter name="eventName" value="TestEvent"/>
+            <parameter name="payload" value="${payLoad}"/>
+            <parameter name="eventHandler" value="#{pageFlowScope.detailsTFBean}"/>
+          </parameters>
+        </consumer>
+      </producer>
+    </event>
+  </eventMap>
+</pageDefinition>
