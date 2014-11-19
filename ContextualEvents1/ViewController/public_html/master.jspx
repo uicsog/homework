@@ -16,11 +16,11 @@
               <af:panelFormLayout id="pfl1">
                 <f:facet name="footer"/>
                 <af:region value="#{bindings.detailstf1.regionModel}" id="r1"/>
-                <af:commandButton text="Publish" id="cb1"
-                                  actionListener="#{backingBeanScope.masterBackingBean.onPublish}"/>
-                <af:commandButton text="Publish 2" id="cb2"
-                                  actionListener="#{bindings.testEvent.listener.processAction}"/>
-                <af:commandButton text="commandButton 3" id="cb3"
+                <!--<af:commandButton text="Publish" id="cb1"
+                                  actionListener="#{backingBeanScope.masterBackingBean.onPublish}"/>-->
+                <!--<af:commandButton text="Publish 2" id="cb2"
+                                  actionListener="#{bindings.testEvent.listener.processAction}"/>-->
+                <af:commandButton text="Publish" id="cb3"
                                   actionListener="#{bindings.eventBinding.listener.processAction}"/>
               </af:panelFormLayout>
             </af:panelHeader>

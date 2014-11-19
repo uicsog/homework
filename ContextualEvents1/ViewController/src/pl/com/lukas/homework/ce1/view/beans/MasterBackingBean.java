@@ -13,11 +13,11 @@ public class MasterBackingBean {
     }
 
 
-    public void onPublish(ActionEvent actionEvent) {
-        System.out.println("onPublish..");
-        BindingContainer bindings = BindingContext.getCurrent().getCurrentBindingsEntry();
-        OperationBinding oper = bindings.getOperationBinding("publishEvent");
-        oper.getParamsMap().put("payload", "PAYLOAD DATA");
-        oper.execute();
-    }
+//    public void onPublish(ActionEvent actionEvent) {
+//        System.out.println("onPublish..");
+//        BindingContainer bindings = BindingContext.getCurrent().getCurrentBindingsEntry();
+//        OperationBinding oper = bindings.getOperationBinding("publishEvent");
+//        oper.getParamsMap().put("payload", "PAYLOAD DATA");
+//        oper.execute();
+//    }
 }

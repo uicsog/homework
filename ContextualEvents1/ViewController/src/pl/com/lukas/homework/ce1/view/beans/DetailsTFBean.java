@@ -17,10 +17,10 @@ public class DetailsTFBean implements GenericEventHandler {
         return detail1;
     }
     
-    public void processEvent(Object payload) {
-        System.out.println("Processing event.. Payload: " + payload);
-        setDetail1(payload.toString());
-    }
+//    public void processEvent(Object payload) {
+//        System.out.println("Processing event.. Payload: " + payload);
+//        setDetail1(payload.toString());
+//    }
 
     public void handleEvent(String eventName, Object payload) {
         System.out.println("Generic processing event " + eventName + ".. Payload: " + payload);

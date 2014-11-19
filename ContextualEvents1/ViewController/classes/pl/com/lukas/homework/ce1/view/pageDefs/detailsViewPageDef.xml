@@ -6,11 +6,10 @@
     <variableIterator id="variables"/>
   </executables>
   <bindings>
-    <methodAction id="handleEvent" InstanceName="EventHandlerBean.dataProvider" DataControl="EventHandlerBean"
+    <!--methodAction id="handleEvent" InstanceName="EventHandlerBean.dataProvider" DataControl="EventHandlerBean"
                   RequiresUpdateModel="true" Action="invokeMethod" MethodName="handleEvent" IsViewObjectMethod="false">
       <NamedData NDName="payload" NDType="java.lang.Object" NDValue="${payLoad}"/>
-    </methodAction>
-    
+    </methodAction-->
     <methodAction id="genericHandleEvent" InstanceName="EventHandlerBean.dataProvider" DataControl="EventHandlerBean"
                   RequiresUpdateModel="true" Action="invokeMethod" MethodName="genericHandleEvent"
                   IsViewObjectMethod="false">
@@ -19,7 +18,6 @@
       <NamedData NDName="eventHandler" NDType="pl.com.lukas.homework.ce1.view.util.GenericEventHandler"/>
     </methodAction>
   </bindings>
-   
   <eventMap xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
     <event name="TestEvent2">
       <producer region="*">

@@ -8,26 +8,26 @@
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings>
-    <methodAction id="publishEvent" InstanceName="EventPublisherBean.dataProvider" DataControl="EventPublisherBean"
+    <!--methodAction id="publishEvent" InstanceName="EventPublisherBean.dataProvider" DataControl="EventPublisherBean"
                   RequiresUpdateModel="true" Action="invokeMethod" MethodName="publishEvent" IsViewObjectMethod="false"
                   ReturnName="data.EventPublisherBean.methodResults.publishEvent_EventPublisherBean_dataProvider_publishEvent_result">
       <NamedData NDName="payload" NDType="java.lang.Object"/>
       <events xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
-        <event name="TestEvent" />
+        <event name="TestEvent"/>
       </events>
     </methodAction>
     <eventBinding id="testEvent" Listener="javax.faces.event.ActionListener">
-        <events xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
-            <event name="testEvent" customPayLoad="PAYLOAD 2"/>
-        </events>
-    </eventBinding>
+      <events xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+        <event name="testEvent" customPayLoad="PAYLOAD 2"/>
+      </events>
+    </eventBinding-->
     <eventBinding id="eventBinding" Listener="javax.faces.event.ActionListener">
       <events xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
         <event name="TestEvent2" customPayLoad="THIRD PAYLOAD"/>
       </events>
     </eventBinding>
   </bindings>
-  <events xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+  <!--events xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
     <event name="TestEvent2" customPayLoad="THIRD PAYLOAD"/>
-  </events>
+  </events-->
 </pageDefinition>
